@@ -16,7 +16,7 @@ const Navbar = () => {
             </li>
           </ul>
           <div>
-          <Link className='mr-3 text-white w-24 bg-emerald-400 p-1 text-center rounded-lg' to="/admin">Admin</Link>
+          <Link className='mr-3 text-white w-24 bg-emerald-400 p-2 text-center rounded-lg' to="/admin">Admin</Link>
           </div>
         </nav>
   )

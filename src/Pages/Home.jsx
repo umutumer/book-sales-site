@@ -19,7 +19,7 @@ const Home = () => {
     <div className="w-full">
       <div
         style={{ "--image-url": `url(${HomeImg})` }}
-        className="flex items-center justify-center w-full h-[500px] bg-[image:var(--image-url)] bg-cover bg-no-repeat "
+        className="flex items-center justify-center w-full h-[500px] bg-[image:var(--image-url)] bg-cover bg-no-repeat bg-fixed "
       >
         <h3 className="text-white text-4xl font-bold">WELCOME BOOK LOVER❤️</h3>
       </div>
@@ -41,12 +41,15 @@ const Home = () => {
         <h3 className="text-center font-medium text-5xl mt-10">Best Sellers</h3>
         <div className="flex flex-wrap justify-center mt-10">
         {bestsellers.map((book, index) => (
-          <div key={index} className="m-4 border border-gray-400 w-[250px] relative">
+          <div key={index} className="m-4 border border-gray-400 w-[250px] h-[550px] relative">
             <img className="w-full" src={book.kitapResim} alt="" />
             <p className="p-1">Kitap Adi: {book.kitapAdi}</p>
             <p className="p-1">Kitap Kategori: {book.kitapKategori}</p>
             <p className="p-1">Kitap Yazari: {book.kitapYazari}</p>
             <AiTwotoneStar className="absolute top-[-20px] left-[-20px] text-[50px] text-yellow-300 z-10" />
+            <button className="absolute bottom-3 w-[230px] left-[10px] bg-green-500 text-white rounded ">
+                Add To Cart
+              </button>
           </div>
         ))}
         </div>
