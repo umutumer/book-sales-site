@@ -6,6 +6,7 @@ import { FaTruckFast } from "react-icons/fa6";
 import { RiSecurePaymentFill } from "react-icons/ri";
 import { BiHappy } from "react-icons/bi";
 import { AiTwotoneStar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -37,8 +38,9 @@ const Home = () => {
           <h3 className="text-xl font-medium text-green-500">Happy Costumer</h3>
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full relative">
         <h3 className="text-center font-medium text-5xl mt-10">Best Sellers</h3>
+        <Link to='/products' className="absolute right-24 top-20 text-blue-500 border-b border-blue-500 font-medium">View All</Link>
         <div className="flex flex-wrap justify-center mt-10">
         {bestsellers.map((book, index) => (
           <div key={index} className="m-4 border border-gray-400 w-[250px] h-[550px] relative">

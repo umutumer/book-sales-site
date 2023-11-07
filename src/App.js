@@ -6,6 +6,8 @@ import Products from './Pages/Products';
 import Home from './Pages/Home';
 import Navbar from './Components/Navbar';
 import './App.css'
+import Footer from './Components/Footer';
+import Update from './Components/Update';
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
         <Route path="/products" element={<Products />} />
           <Route path="/about" element={<About />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/update/:id" element={<Update />} />
         </Routes>
+        <Footer />
     </Router>
   );
 }

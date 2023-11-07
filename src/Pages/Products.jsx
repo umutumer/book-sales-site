@@ -16,13 +16,13 @@ const Products = () => {
 
   return (
     <div className="flex">
-      <div className="w-1/4 p-4 mt-24 relative">
+      <div className="w-1/4 p-4 mt-24 relative bg-gray-100">
      <div className="fixed top-24 p-4">
-     <h2 className="text-3xl mb-4">Kategoriler</h2>
+     <h2 className="text-5xl mb-6">Kategoriler</h2>
       <ul>
-        <li className="text-xl cursor-pointer border-b" onClick={() => setSelectedCategory("Tüm Kitaplar")}>Tüm Kitaplar</li>
+        <li className="text-3xl cursor-pointer pb-1 mb-5" onClick={() => setSelectedCategory("Tüm Kitaplar")}>Tüm Kitaplar</li>
         {uniqueCategories.map((category, index) => (
-          <li className="text-xl cursor-pointer border-b" key={index} onClick={() => setSelectedCategory(category)}>{category}</li>
+          <li className="text-3xl cursor-pointer mb-5" key={index} onClick={() => setSelectedCategory(category)}>{category}</li>
         ))}
       </ul>
      </div>
