@@ -6,7 +6,7 @@ import { updateData } from '../Redux/slice';
 const Update = () => {
     const { id } = useParams();
     const data = useSelector(state => state.data);
-    const existingBook = data.find(user => data.id == id) || {};
+    const existingBook = data.find(book => book.id == id) || {};
 
     const { kitapAdi,kitapKategori,kitapYazari,sayfaSayisi,kitapResim} = existingBook;
 

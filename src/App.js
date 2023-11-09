@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar';
 import './App.css'
 import Footer from './Components/Footer';
 import Update from './Components/Update';
+import Details from './Pages/Details';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/update/:id" element={<Update />} />
+          <Route path="/details/:id" component={<Details />} />
         </Routes>
         <Footer />
     </Router>
