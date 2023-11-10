@@ -1,11 +1,20 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { addToCart } from "../Redux/CartSlice";
 
 const Products = () => {
   const data = useSelector((state) => state.data);
+  const dispatch = useDispatch();
   const [selectedCategory, setSelectedCategory] = useState("Tüm Kitaplar");
   const uniqueCategories = [...new Set(data.map((book) => book.kitapKategori))];
+
+  const handleAddToCart = (productId) => {
+    const product = data.find((item) => item.id === productId);
+    if (product) {
+      dispatch(addToCart(product));
+    }
+  };
 
   const filteredData = data.filter((book) => {
     if (selectedCategory === "Tüm Kitaplar") {
@@ -58,7 +67,10 @@ const Products = () => {
                   <p className="p-1">Kitap Yazarı: {book.kitapYazari}</p>
                 </Link>
               </div>
-              <button className="absolute bottom-3 w-[230px] left-[10px] bg-green-500 text-white rounded ">
+              <button
+                onClick={() => handleAddToCart(book.id)}
+                className="absolute bottom-3 w-[230px] left-[10px] bg-green-500 text-white rounded "
+              >
                 Add To Cart
               </button>
             </div>
@@ -68,6 +80,5 @@ const Products = () => {
     </div>
   );
 };
-
 
 export default Products;

@@ -9,6 +9,7 @@ import "./App.css";
 import Footer from "./Components/Footer";
 import Update from "./Components/Update";
 import Details from "./Pages/Details";
+import Cart from "./Pages/Cart";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/update/:id" element={<Update />} />
         <Route path="/details/:id" element={<Details />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />
     </Router>
