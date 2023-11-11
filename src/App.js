@@ -10,11 +10,16 @@ import Footer from "./Components/Footer";
 import Update from "./Components/Update";
 import Details from "./Pages/Details";
 import Cart from "./Pages/Cart";
+import Payment from "./Pages/Payment";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
@@ -23,6 +28,7 @@ function App() {
         <Route path="/update/:id" element={<Update />} />
         <Route path="/details/:id" element={<Details />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/cart/payment" element={<Payment />} />
       </Routes>
       <Footer />
     </Router>

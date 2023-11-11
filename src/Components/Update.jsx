@@ -8,13 +8,14 @@ const Update = () => {
     const data = useSelector(state => state.data);
     const existingBook = data.find(book => book.id == id) || {};
 
-    const { kitapAdi,kitapKategori,kitapYazari,sayfaSayisi,kitapResim} = existingBook;
+    const { kitapAdi,kitapKategori,kitapYazari,sayfaSayisi,kitapResim,kitapAciklama} = existingBook;
 
     const [upKitapAdi, setUpKitapAdi] = useState(kitapAdi);
     const [upKitapKategori, setUpKitapKategori] = useState(kitapKategori);
     const [upKitapYazari, setUpKitapYazari] = useState(kitapYazari);
     const [upSayfaSayisi, setUpSayfaSayisi] = useState(sayfaSayisi);
     const [upKitapResim, setUpKitapResim] = useState(kitapResim);
+    const [upkitapAciklama, setUpKkitapAciklama] = useState(kitapAciklama);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -57,6 +58,10 @@ const Update = () => {
                     <label className="text-xl font-medium mr-2" htmlFor="email">Kitap Resim Url:</label> <br />
                     <input className=" w-80 border-solid border p-1 rounded-md" type="text"   value={kitapResim} onChange={e => setUpKitapResim(e.target.value)} />
                 </div> <br />
+                <div>
+                <label className="text-xl font-medium mr-2" htmlFor="email">Kitap Resim Url:</label> <br />
+                <textarea className=" w-80 border-solid border p-1 rounded-md" value={kitapAciklama} name="" id="" cols="30" rows="10"></textarea>
+                </div>
                 <button className=" w-32 p-1 mb-5 text-white rounded-xl bg-green-500 hover:shadow-green-400 hover:shadow-lg ease-in-out duration-300">Update</button>
             </form>
         </div>

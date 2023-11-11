@@ -27,10 +27,10 @@ const Home = () => {
         style={{ "--image-url": `url(${HomeImg})` }}
         className="flex items-center justify-center w-full h-[500px] bg-[image:var(--image-url)] bg-cover bg-no-repeat bg-fixed "
       >
-        <h3 className="text-white text-4xl font-bold">WELCOME BOOK LOVER❤️</h3>
+        <h3 className="w-full text-white text-center text-4xl font-bold">WELCOME BOOK LOVER❤️</h3>
       </div>
-      <div className="w-full flex justify-around bg-gray-100">
-        <div className="p-10 flex flex-col items-center">
+      <div className="w-full flex flex-wrap justify-around bg-gray-100">
+        <div className="w-200 p-10 flex flex-col items-center">
           <FaTruckFast className="text-4xl text-green-500" />
           <h3 className="text-xl font-medium text-green-500">Fast Delivery</h3>
         </div>
@@ -57,12 +57,13 @@ const Home = () => {
           {bestsellers.map((book, index) => (
             <div
               key={index}
-              className="m-4 border border-gray-400 w-[250px] h-[550px] relative"
+              className="m-4 border border-gray-400 w-[250px] h-[600px] relative"
             >
               <img className="w-full" src={book.kitapResim} alt="" />
               <p className="p-1">Kitap Adi: {book.kitapAdi}</p>
               <p className="p-1">Kitap Kategori: {book.kitapKategori}</p>
               <p className="p-1">Kitap Yazari: {book.kitapYazari}</p>
+              <p className="p-1">Fiyat: {book.kitapFiyat}₺</p>
               <AiTwotoneStar className="absolute top-[-20px] left-[-20px] text-[50px] text-yellow-300 z-10" />
               <button className="absolute bottom-3 w-[230px] left-[10px] bg-green-500 text-white rounded ">
                 Add To Cart
@@ -71,12 +72,12 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="w-full h-[500px] flex flex-col bg-gray-100">
+      <div className="w-full flex flex-col bg-gray-100">
         <h3 className="text-4xl text-center m-5 text-green-500">
           Customer Comments
         </h3>
-        <div className="flex w-full justify-evenly items-center">
-          <div className="w-[300px] h-[300px] p-2 bg-white relative rounded-2xl">
+        <div className="flex flex-wrap w-full justify-evenly items-center">
+          <div className="w-[300px] h-[300px] p-2 mb-5 bg-white relative rounded-2xl">
             <p className="mt-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
               beatae ex sapiente ipsa laudantium quam molestias distinctio iure
@@ -98,7 +99,7 @@ const Home = () => {
             </div>
             <FaComments className="absolute text-green-500 text-4xl -top-4 left-0" />
           </div>
-          <div className="w-[300px] h-[300px] p-2 bg-white relative rounded-2xl">
+          <div className="w-[300px] h-[300px] p-2 mb-5 bg-white relative rounded-2xl">
             <p className="mt-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
               beatae ex sapiente ipsa laudantium quam molestias distinctio iure
@@ -120,7 +121,7 @@ const Home = () => {
             </div>
             <FaComments className="absolute text-green-500 text-4xl -top-4 left-0" />
           </div>
-          <div className="w-[300px] h-[300px] p-2 bg-white relative rounded-2xl">
+          <div className="w-[300px] h-[300px] p-2 mb-5 bg-white relative rounded-2xl">
             <p className="mt-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
               beatae ex sapiente ipsa laudantium quam molestias distinctio iure

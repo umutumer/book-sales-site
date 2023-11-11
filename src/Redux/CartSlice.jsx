@@ -5,17 +5,29 @@ const cartSlice = createSlice({
   initialState: {
     items: [],
     itemCount: 0,
-    itemDisCount:0,
+    totalPrice: 0,
   },
   reducers: {
     addToCart: (state, action) => {
       const product = action.payload;
       state.items.push(product);
       state.itemCount += 1;
-      state.itemDisCount += state.itemDisCount;
+      state.totalPrice += product.kitapFiyat;
     },
+    removeFromCart: (state, action) => {
+      const indexToRemove = action.payload;
+      const removedItem = state.items[indexToRemove];
+      state.items.splice(indexToRemove, 1);
+      state.itemCount -= 1;
+      state.totalPrice -= removedItem.kitapFiyat;
+    },
+    paymentConfirm: (state) =>{
+      state.items = [];
+      state.itemCount = 0;
+      state.totalPrice = 0;
+    }
   },
 });
 
-export const { addToCart } = cartSlice.actions;
+export const { addToCart , removeFromCart , paymentConfirm } = cartSlice.actions;
 export default cartSlice.reducer;
