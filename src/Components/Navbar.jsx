@@ -9,16 +9,16 @@ const Navbar = () => {
       <div className="text-white sm:ml-3 ml-1 sm:text-2xl text-xl font-semibold">LOGO</div>
       <ul className="flex text-white font-normal sm:text-xl text-lg">
         <li className="sm:mr-3 mr-1">
-          <Link to="/">Ana Sayfa</Link>
+          <Link to="/">Home</Link>
         </li>
         <li className="sm:mr-3 mr-1">
-          <Link to="/about">Hakkında</Link>
+          <Link to="/about">About</Link>
         </li>
         <li className="sm:mr-3 mr-1">
-          <Link to="/products">Ürünler</Link>
+          <Link to="/products">Products</Link>
         </li>
       </ul>
-      <div className="flex items-center">
+      <div className="flex items-center z-50">
         <Link to="/cart" className="sm:mr-3 mr-1 relative text-white sm:text-3xl text-2xl">
           <FaShoppingCart />
           {cartItemCount > 0 && <span className="absolute -top-2 -right-1 sm:w-6 w-4 h-4 sm:h-6 sm:text-base  text-sm text-center bg-green-500 rounded-full">{cartItemCount}</span>}

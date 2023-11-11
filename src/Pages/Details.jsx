@@ -21,10 +21,10 @@ const Details = () => {
           <img className="w-[400px] rounded-2xl" src={book.kitapResim} alt={book.kitapAdi} />
         </div>
         <div className="w-[500px]">
-          <p className="ml-3 mb-3 text-xl font-medium text-gray-800 border-b pb-1"> <span className=" text-green-500">Kitap Adı:</span> {book.kitapAdi} </p>
-          <p className="ml-3 mb-3 text-xl font-medium text-gray-800 border-b pb-1"><span className=" text-green-500">Kitap Kategorisi:</span> {book.kitapKategori}</p>
-          <p className="ml-3 mb-3 text-xl font-medium text-gray-800 border-b pb-1"><span className=" text-green-500">Kitap Yazarı:</span> {book.kitapYazari}</p>
-          <p className="ml-3 mb-3 text-xl font-medium text-gray-800 border-b pb-1"><span className=" text-green-500">Kitap Açıklaması:</span> {book.kitapAciklama.substring(0, 700) + "..."}{" "}</p>
+          <p className="ml-3 mb-3 text-xl font-medium text-gray-800 border-b pb-1"> <span className=" text-green-500">Book Name:</span> {book.kitapAdi} </p>
+          <p className="ml-3 mb-3 text-xl font-medium text-gray-800 border-b pb-1"><span className=" text-green-500">Book Category:</span> {book.kitapKategori}</p>
+          <p className="ml-3 mb-3 text-xl font-medium text-gray-800 border-b pb-1"><span className=" text-green-500">Book author:</span> {book.kitapYazari}</p>
+          <p className="ml-3 mb-3 text-xl font-medium text-gray-800 border-b pb-1"><span className=" text-green-500">Book Description:</span> {book.kitapAciklama.substring(0, 700) + "..."}{" "}</p>
           <button className=" w-[230px] mt-10 ml-3 bg-green-500 text-white rounded ">
                 Add To Cart
               </button>

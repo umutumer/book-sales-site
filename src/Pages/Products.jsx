@@ -7,16 +7,16 @@ import { toast } from "react-toastify";
 const Products = () => {
   const data = useSelector((state) => state.data);
   const dispatch = useDispatch();
-  const [selectedCategory, setSelectedCategory] = useState("Tüm Kitaplar");
+  const [selectedCategory, setSelectedCategory] = useState("All Books");
   const uniqueCategories = [...new Set(data.map((book) => book.kitapKategori))];
 
   const handleAddToCart = (productId) => {
     const product = data.find((item) => item.id === productId);
     if (product) {
       dispatch(addToCart(product));
-      toast.success('🛒 Sepete Eklendi!', {
+      toast.success('🛒 Added to Cart!', {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -28,7 +28,7 @@ const Products = () => {
   };
 
   const filteredData = data.filter((book) => {
-    if (selectedCategory === "Tüm Kitaplar") {
+    if (selectedCategory === "All Books") {
       return true;
     } else {
       return book.kitapKategori === selectedCategory;
@@ -38,14 +38,14 @@ const Products = () => {
   return (
     <div className="flex w-full h-full">
       <div className="sm:w-1/4 w-none mt-24 relative ">
-        <div className="fixed z-50 sm:block flex sm:w-1/4 w-full sm:h-full h-12  sm:bg-gray-100 sm:text-black text-white bg-black top-24 p-4">
-          <h2 className="sm:text-5xl text-xl sm:mb-6 mr-2 sm:items-start items-center">Kategoriler</h2>
-          <ul className="sm:block flex">
+        <div className="fixed z-30 sm:block flex sm:w-1/4 w-full sm:h-full h-12  sm:bg-gray-100 sm:text-black text-white bg-black top-24 p-4">
+          <h2 className="sm:block hidden sm:text-5xl text-xl sm:mb-6 mr-2 sm:items-start items-center">Categories</h2>
+          <ul className="w-full sm:block flex sm:items-start items-center sm:justify-start justify-center">
             <li
               className="sm:text-3xl text-lg sm:w-full cursor-pointer sm:pb-1 sm:mb-5 mr-2"
-              onClick={() => setSelectedCategory("Tüm Kitaplar")}
+              onClick={() => setSelectedCategory("All Books")}
             >
-              Tüm Kitaplar
+              All Books
             </li>
             {uniqueCategories.map((category, index) => (
               <li
@@ -73,10 +73,10 @@ const Products = () => {
                     src={book.kitapResim}
                     alt=""
                   />
-                  <p className="p-1">Kitap Adı: {book.kitapAdi}</p>
-                  <p className="p-1">Kitap Kategorisi: {book.kitapKategori}</p>
-                  <p className="p-1">Kitap Yazarı: {book.kitapYazari}</p>
-                  <p className="p-1">Fiyat: {book.kitapFiyat}₺</p>
+                  <p className="p-1">Book Name: {book.kitapAdi}</p>
+                  <p className="p-1">Book Category: {book.kitapKategori}</p>
+                  <p className="p-1">Book author: {book.kitapYazari}</p>
+                  <p className="p-1">Price: {book.kitapFiyat}$</p>
                 </Link>
               </div>
               <button

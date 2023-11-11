@@ -60,10 +60,10 @@ const Home = () => {
               className="m-4 border border-gray-400 w-[250px] h-[600px] relative"
             >
               <img className="w-full" src={book.kitapResim} alt="" />
-              <p className="p-1">Kitap Adi: {book.kitapAdi}</p>
-              <p className="p-1">Kitap Kategori: {book.kitapKategori}</p>
-              <p className="p-1">Kitap Yazari: {book.kitapYazari}</p>
-              <p className="p-1">Fiyat: {book.kitapFiyat}₺</p>
+              <p className="p-1">Book Name: {book.kitapAdi}</p>
+              <p className="p-1">Book Category: {book.kitapKategori}</p>
+              <p className="p-1">Book author: {book.kitapYazari}</p>
+              <p className="p-1">Price: {book.kitapFiyat}$</p>
               <AiTwotoneStar className="absolute top-[-20px] left-[-20px] text-[50px] text-yellow-300 z-10" />
               <button className="absolute bottom-3 w-[230px] left-[10px] bg-green-500 text-white rounded ">
                 Add To Cart

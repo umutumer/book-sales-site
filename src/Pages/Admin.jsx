@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../Redux/action";
 import { Link } from "react-router-dom";
-
 const Admin = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.data);
@@ -17,12 +16,12 @@ const Admin = () => {
         <table className="mt-24 w-full">
           <thead>
             <tr className=" border-b text-left">
-              <th>Kitap Adı</th>
-              <th>Kitap Kategori</th>
-              <th>Kitap Yazarı</th>
+              <th>Book Name</th>
+              <th>Book Category</th>
+              <th>Book author</th>
               <th>Sayfa Sayısı</th>
-              <th>Kitap Resim Url</th>
-              <th>Kitap Açıklama</th>
+              <th>Book Image Url</th>
+              <th>Book Description</th>
               <th>Action</th>
             </tr>
           </thead>

@@ -11,7 +11,7 @@ const Payment = () => {
   const dispatch = useDispatch();
 
   const handlePaymentConfirm = () => {
-    toast.success("🛒 Ödeme Başarılı!", {
+    toast.success("🛒 Payment Successful!", {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
@@ -36,7 +36,7 @@ const Payment = () => {
             <div className="flex flex-wrap w-[80%]">
               <div className="w-[70%] mb-5">
                 <label className="text-green-500 font-medium text-xl">
-                  Kart Üzerindeki İsim
+                  Name On The Card
                 </label>{" "}
                 <br />
                 <input
@@ -63,7 +63,7 @@ const Payment = () => {
             </div>
             <div className="w-[80%] mb-5">
               <label className="text-green-500 font-medium text-xl">
-                Kart Numarası
+                Card Number
               </label>{" "}
               <br />
               <input
@@ -80,10 +80,10 @@ const Payment = () => {
             </div>
             <div className="w-[80%] mb-5">
               <label className="text-green-500 font-medium text-xl">
-                Son Kullanma Tarihi{" "}
+              Expiration date{" "}
               </label>{" "}
               <br />
-              <select className="w-[20%] h-10 mr-2 border" name="Ay" id="Ay" required>
+              <select className="w-[20%] h-10 mr-2 border" name="Months" id="Months" required>
                 <option value="01">01</option>
                 <option value="02">02</option>
                 <option value="03">03</option>
@@ -97,7 +97,7 @@ const Payment = () => {
                 <option value="11">11</option>
                 <option value="12">12</option>
               </select>
-              <select className="w-[20%] h-10 border" name="Yıl" id="Yıl" required>
+              <select className="w-[20%] h-10 border" name="Years" id="Years" required>
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
                 <option value="2025">2025</option>
@@ -107,9 +107,6 @@ const Payment = () => {
                 <option value="2029">2029</option>
                 <option value="2030">2030</option>
                 <option value="2031">2031</option>
-                <option value="2032">2032</option>
-                <option value="2033">2033</option>
-                <option value="2034">2034</option>
               </select>
             </div>
           </div>
@@ -120,12 +117,11 @@ const Payment = () => {
               {cartItemCount}
             </p>
             <p className="text-xl mb-3">
-              <span className="font-medium text-green-500">Toplam Tutar:</span>{" "}
-              {cartItemPrice}₺
+              <span className="font-medium text-green-500">Total Amount:</span>{" "}
+              {cartItemPrice}$
             </p>
             <button className="w-[90%] bg-green-500 text-white text-xl text-center absolute bottom-4 rounded-xl p-1">
-              {" "}
-              Ödeme Yap
+            Pay Now
             </button>
           </div>
         </div>

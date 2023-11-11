@@ -3,7 +3,7 @@
       {
         "id": 1,
         "kitapAdi": "Kafamda Bir Tuhaflık",
-        "kitapKategori": "Edebiyat",
+        "kitapKategori": "Literature",
         "kitapYazari": "Orhan Pamuk",
         "sayfaSayisi": 480,
         "kitapResim": "https://img.kitapyurdu.com/v1/getImage/fn:5192424/wh:true/wi:220",
@@ -14,7 +14,7 @@
       {
         "id": 2,
         "kitapAdi": "Kapsamlı Python Kursu",
-        "kitapKategori": "Yazılım",
+        "kitapKategori": "Software",
         "kitapYazari": "Eric Matthes",
         "sayfaSayisi": 608,
         "kitapResim": "https://static.ticimax.cloud/30373/uploads/urunresimleri/kapsamli-python-kursu-programlamaya-uy-3e965f.jpg",
@@ -24,7 +24,7 @@
       {
         "id": 3,
         "kitapAdi": " Hayatımızdaki Algoritmalar",
-        "kitapKategori": "Yazılım",
+        "kitapKategori": "Software",
         "kitapYazari": "Brian Christian, Tom Griffiths",
         "sayfaSayisi": 496,
         "kitapResim": "https://static.ticimax.cloud/30373/uploads/urunresimleri/hayatimizdaki-algoritmalar-gunluk-kararl-022b.jpg",
@@ -34,7 +34,7 @@
       {
         "id": 4,
         "kitapAdi": "İnce Memed 1",
-        "kitapKategori": "Edebiyat",
+        "kitapKategori": "Literature",
         "kitapYazari": "Yaşar Kemal",
         "sayfaSayisi": 352,
         "kitapResim": "https://r2.1k-cdn.com/sig/size:128/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2F39535_AMRrt_1507312826.jpg",
@@ -44,7 +44,7 @@
       {
         "id": 5,
         "kitapAdi": "Cumhuriyetin 100 Günü",
-        "kitapKategori": "Tarih",
+        "kitapKategori": "History",
         "kitapYazari": "Emrah Safa Gürkan",
         "sayfaSayisi": 608,
         "kitapResim": "https://img.kitapyurdu.com/v1/getImage/fn:11707006/wh:true/wi:220",
@@ -55,7 +55,7 @@
       {
         "id": 6,
         "kitapAdi": "Şeker Portakalı",
-        "kitapKategori": "Diğer",
+        "kitapKategori": "Other",
         "kitapYazari": "Jose Mauro De Vasconcelos",
         "sayfaSayisi": 200,
         "kitapResim": "https://i.dr.com.tr/cache/500x400-0/originals/0000000064031-1.jpg",
@@ -66,7 +66,7 @@
       {
         "id": 7,
         "kitapAdi": "Gazi Mustafa Kemal Atatürk",
-        "kitapKategori": "Tarih",
+        "kitapKategori": "History",
         "kitapYazari": "İlber Ortaylı",
         "sayfaSayisi": 480,
         "kitapResim": "https://i.dr.com.tr/cache/500x400-0/originals/0001740229001-1.jpg",
@@ -76,7 +76,7 @@
       {
         "id": 8,
         "kitapAdi": "Tongue Fu",
-        "kitapKategori": "Diğer",
+        "kitapKategori": "Other",
         "kitapYazari": "Sam Horn",
         "sayfaSayisi": 289,
         "kitapResim": "https://r2.1k-cdn.com/sig/size:128/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2F332663_dccdd_1552245370.jpg",
@@ -86,7 +86,7 @@
       {
         "id": 9,
         "kitapAdi": "Elon Musk",
-        "kitapKategori": "Diğer",
+        "kitapKategori": "Other",
         "kitapYazari": "Ashlee Vance",
         "sayfaSayisi": 462,
         "kitapResim": "https://static.ticimax.cloud/30373/uploads/urunresimleri/elon-musk-tesla-spacex-ve-muhtesem-gelec-e6e2.jpg",
@@ -96,7 +96,7 @@
       {
         "id": 10,
         "kitapAdi": "Stoacının Günlüğü",
-        "kitapKategori": "Diğer",
+        "kitapKategori": "Other",
         "kitapYazari": "Stephen Hanselman",
         "sayfaSayisi": 432,
         "kitapResim": "https://r2.1k-cdn.com/sig/size:128/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2F1010667_a139e_1619956364.jpg",
@@ -106,7 +106,7 @@
       {
         "id": 11,
         "kitapAdi": "İktidar-Güç Sahibi Olmanın 48 Yasası",
-        "kitapKategori": "Diğer",
+        "kitapKategori": "Other",
         "kitapYazari": "Robert Greene",
         "sayfaSayisi": "622",
         "kitapResim": "https://i.dr.com.tr/cache/500x400-0/originals/0000000077265-1.jpg",
@@ -117,23 +117,23 @@
     "kategoriler": [
       {
         "kategoriId": 0,
-        "kategoriAdı": "Tüm Kitaplar"
+        "kategoriAdı": "All Books"
       },
       {
         "kategoriId": 1,
-        "kategoriAdı": "Yazılım"
+        "kategoriAdı": "Software"
       },
       {
         "kategoriId": 2,
-        "kategoriAdı": "Edebiyat"
+        "kategoriAdı": "Literature"
       },
       {
         "kategoriId": 3,
-        "kategoriAdı": "Tarih"
+        "kategoriAdı": "History"
       },
       {
         "kategoriId": 4,
-        "kategoriAdı": "Diğer"
+        "kategoriAdı": "Other"
       }
     ]
   }

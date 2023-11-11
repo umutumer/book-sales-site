@@ -13,7 +13,7 @@ const Cart = () => {
 
   const handleRemoveFromCart = (index) => {
     dispatch(removeFromCart(index));
-    toast.success('🛒 Sepetten Silindi!', {
+    toast.success('🛒 Deleted from Cart!', {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
@@ -39,10 +39,10 @@ const Cart = () => {
                 <img className="w-28" src={item.kitapResim} alt="" />
               </div>
               <div className="p-5">
-                <p className="mr-2"><span className="font-medium text-green-500">Kitap Adı:</span> {item.kitapAdi}</p>
-                <p className="mr-2"><span className="font-medium text-green-500">Kitap Kategori:</span> {item.kitapKategori}</p>
-                <p className="mr-2"><span className="font-medium text-green-500">Kitap Yazarı:</span> {item.kitapYazari}</p>
-                <p className="mr-2"><span className="font-medium text-green-500">Fiyat:</span> {item.kitapFiyat}₺</p>
+                <p className="mr-2"><span className="font-medium text-green-500">Book Name:</span> {item.kitapAdi}</p>
+                <p className="mr-2"><span className="font-medium text-green-500">Book Category:</span> {item.kitapKategori}</p>
+                <p className="mr-2"><span className="font-medium text-green-500">Book Author:</span> {item.kitapYazari}</p>
+                <p className="mr-2"><span className="font-medium text-green-500">Price:</span> {item.kitapFiyat}₺</p>
               </div>
               <div>
               <button   onClick={() => handleRemoveFromCart(index)}  className="absolute right-0 top-0 text-2xl text-center text-white bg-green-500 w-[50px] rounded-se-xl p-[10px]"><BsFillTrashFill /></button>
@@ -51,10 +51,10 @@ const Cart = () => {
           ))}
         </div>
         <div className="min-w-[300px] h-[300px] bg-gray-100 sm:mr-20 mr-0 sm:mb-0 mb-5 flex flex-col items-center text-center rounded-xl relative">
-          <h3 className="text-2xl mb-3 mt-1">Sipariş Özeti</h3>
+          <h3 className="text-2xl mb-3 mt-1">Order Summary</h3>
           <p className="text-2xl mb-3"><span className="font-medium text-green-500">Total Items:</span> {cartItemCount}</p>
-          <p className="text-xl mb-3"><span className="font-medium text-green-500">Toplam Tutar:</span> {cartItemPrice}₺</p>
-          <Link to='payment' className="w-[90%] bg-green-500 text-white text-xl text-center absolute bottom-4 rounded-xl p-1"> Sepeti Onayla</Link>
+          <p className="text-xl mb-3"><span className="font-medium text-green-500">Total Amount:</span> {cartItemPrice}$</p>
+          <Link to='payment' className="w-[90%] bg-green-500 text-white text-xl text-center absolute bottom-4 rounded-xl p-1">Confirm Cart</Link>
         </div>
       </div>
     </div>
