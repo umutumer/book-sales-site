@@ -38,7 +38,7 @@ const Products = () => {
   return (
     <div className="flex w-full h-full">
       <div className="sm:w-1/4 w-none mt-24 relative ">
-        <div className="fixed z-30 sm:block flex sm:w-1/4 w-full sm:h-full h-12  sm:bg-gray-100 sm:text-black text-white bg-black top-24 p-4">
+        <div className="fixed z-10 sm:block flex sm:w-1/4 w-full sm:h-full h-12  sm:bg-gray-100 sm:text-black text-white bg-black top-24 p-4">
           <h2 className="sm:block hidden sm:text-5xl text-xl sm:mb-6 mr-2 sm:items-start items-center">Categories</h2>
           <ul className="w-full sm:block flex sm:items-start items-center sm:justify-start justify-center">
             <li
